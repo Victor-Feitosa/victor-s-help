@@ -36,11 +36,11 @@ document.getElementById('habilitarAgendamento').addEventListener('change', funct
     const pronome = sexo === 'masculino' ? 'Sr.' : 'Sra.';
     const pronomesolicitacao = sexo === 'masculino' ? 'do' : 'da';
   
-    const saudacaoPadrao = `${saudacao} ${pronome} ${primeiroNome}, tudo bem?\nEu sou o Victor.`;
+    const saudacaoPadrao = `${saudacao} ${pronome} ${primeiroNome}, tudo bem?\nEu sou o Victor, auxiliar, faço parte da equipe do Dr. Guilherme.`;
   
     const respostas = [
       {
-        titulo: 'Resposta Gerada',
+        titulo: 'Resposta Base',
         texto: saudacaoPadrao
       },
       {
@@ -49,11 +49,15 @@ document.getElementById('habilitarAgendamento').addEventListener('change', funct
       },
       {
         titulo: 'Solicitação de prorrogação',
-        texto: `${saudacaoPadrao}\nFoi realizado o pedido de prorrogação ${pronomesolicitacao} ${pronome}. O resultado sai hoje após as 20:00, caso queira acompanhar no APP "Meu INSS", ou então, amanhã pela manhã entro em contato para avisar.`
+        texto: `${saudacaoPadrao}\nFoi realizado o pedido de prorrogação ${pronomesolicitacao} ${pronome}. O resultado sai hoje após as 20:00, caso queira acompanhar no aplicativo "Meu INSS", ou então, amanhã pela manhã entro em contato para avisar.`
+      },
+      {
+        titulo: 'Andamento de processo (sem novidade)',
+        texto: `${saudacaoPadrao}\nVerifiquei o seu processo, e até o presente momento não temos novidades.\nAssim que houver alguma atualização no processo ${pronomesolicitacao} ${pronome}, eu entro em contato para avisar, tudo bem?`
       },
       {
         titulo: 'Nome',
-        texto: `${saudacao} ${primeiroNome}, tudo bem?\nEu sou o Victor.\nQual o seu nome completo, por favor.`
+        texto: `${saudacao}, tudo bem?\nEu sou o Victor, auxiliar, faço parte da equipe do Dr. Guilherme.\nQual o seu nome completo, por favor.`
       }
     ];
   
