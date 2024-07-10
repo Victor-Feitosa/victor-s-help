@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Respostas</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/victorshelp_logo.webp"
+            alt="Victor's Help Logo"
+            class="logo"
+          />
+          Victor's Help
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="respostas.html">Respostas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prorrogacao.html">Prorrogação</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <h1 class="mb-4 text-center">Gerador de Respostas</h1>
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          placeholder="Digite o nome da pessoa"
+        />
+      </div>
+      <div class="form-group">
+        <label>Sexo:</label><br />
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="sexo"
+            id="masculino"
+            value="masculino"
+          />
+          <label class="form-check-label" for="masculino">Masculino</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="sexo"
+            id="feminino"
+            value="feminino"
+          />
+          <label class="form-check-label" for="feminino">Feminino</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="habilitarAgendamento" /> Habilitar
+          agendamento
+        </label>
+      </div>
+      <div id="agendamentoCampos" class="d-none">
+        <div class="form-group">
+          <label for="dataAgendamento">Data do agendamento:</label>
+          <input type="date" class="form-control" id="dataAgendamento" />
+        </div>
+        <div class="form-group">
+          <label for="horaAgendamento">Hora do agendamento:</label>
+          <input type="time" class="form-control" id="horaAgendamento" />
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="clienteNovo" /> Cliente novo
+          </label>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="gerar">Gerar Respostas</button>
+
+      <div class="form-group mt-4">
+        <label for="searchTitulo">Buscar por título:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="searchTitulo"
+          placeholder="Digite o título da resposta"
+        />
+      </div>
+
+      <div id="respostaContainer" class="row mt-5"></div>
+    </div>
+
+    <footer class="bg-light text-center py-4">
+      <div class="container">
+        <p class="text-muted">
+          &copy; 2024 Victor's Help. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
