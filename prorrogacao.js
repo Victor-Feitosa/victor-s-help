@@ -25,13 +25,13 @@ document.getElementById('gerar').addEventListener('click', function() {
     const pronomesolicitacao = sexo === 'masculino' ? 'do' : 'da';
   
     const saudacaoPadrao = `${saudacao} ${pronome} ${primeiroNome}, tudo bem?\nEu sou o Victor, auxiliar, faço parte da equipe do Dr. Guilherme.`;
-      
+
     const dataFormatada = formatarDataBrasileira(dataCessacao);
     const dataLembrete = calcularDataLembrete(dataCessacao);
   
     const respostaProrrogacao = `${saudacaoPadrao}\nO benefício ${pronomesolicitacao} ${pronome} foi prorrogado até o dia ${dataFormatada}. Vou solicitar que entre em contato 15 dias antes, para que eu possa pedir a prorrogação novamente.`;
   
-    const respostaPedido = `Pedido de prorrogação - N° benefício ${numeroBeneficio} (Cessação ${dataFormatada}) - ${nomeCompleto}`;
+    const respostaPedido = `Fazer pedido de prorrogação - Benefício n° ${numeroBeneficio} (Cessação ${dataFormatada}) - ${nomeCompleto}`;
   
     const respostaContainer = document.getElementById('respostaContainer');
     respostaContainer.innerHTML = '';
