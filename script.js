@@ -94,7 +94,7 @@ document.getElementById('habilitarAgendamento').addEventListener('change', funct
   
       const botaoCopiar = document.createElement('button');
       botaoCopiar.classList.add('btn', 'btn-secondary');
-      botaoCopiar.innerHTML = '<i class="fa fa-copy"></i> Copiar';
+      botaoCopiar.innerHTML = '<i class="bi bi-clipboard"></i> Copiar';
       botaoCopiar.addEventListener('click', () => copiarTexto(resposta.texto));
   
       respostaBox.appendChild(respostaTitulo);
