@@ -24,8 +24,8 @@ document.getElementById('gerar').addEventListener('click', function() {
     const pronome = sexo === 'masculino' ? 'Sr.' : 'Sra.';
     const pronomesolicitacao = sexo === 'masculino' ? 'do' : 'da';
   
-    const saudacaoPadrao = `${saudacao} ${pronome} ${primeiroNome}, tudo bem?\nEu sou o Victor.`;
-  
+    const saudacaoPadrao = `${saudacao} ${pronome} ${primeiroNome}, tudo bem?\nEu sou o Victor, auxiliar, faço parte da equipe do Dr. Guilherme.`;
+      
     const dataFormatada = formatarDataBrasileira(dataCessacao);
     const dataLembrete = calcularDataLembrete(dataCessacao);
   
